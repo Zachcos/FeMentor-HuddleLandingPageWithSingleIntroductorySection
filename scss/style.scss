@@ -2,4 +2,20 @@
 
 /* Variables and Mixins */
 $violet: hsl(257, 40%, 49%);
+
+@mixin font__display--thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+@mixin font__display--bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+@mixin font__copy {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
 /* End Variables and Mixins */
