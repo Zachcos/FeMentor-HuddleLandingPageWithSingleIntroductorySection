@@ -67,4 +67,22 @@ $violet: hsl(257, 40%, 49%);
       }
     }
   }
+  .social {
+    bottom: 20px;
+    display: flex;
+    position: absolute;
+    right: 100px;
+    &--icon {
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid white;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      margin-left: 15px;
+      width: 40px;
+    }
+  }
 }

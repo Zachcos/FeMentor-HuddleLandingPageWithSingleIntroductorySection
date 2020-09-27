@@ -192,5 +192,23 @@ table {
   -moz-box-shadow: 0px 10px 6px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 10px 6px 0px rgba(0, 0, 0, 0.15);
 }
+.page__full-wrap .social {
+  bottom: 20px;
+  display: flex;
+  position: absolute;
+  right: 100px;
+}
+.page__full-wrap .social--icon {
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  margin-left: 15px;
+  width: 40px;
+}
 
 /*# sourceMappingURL=style.css.map */
