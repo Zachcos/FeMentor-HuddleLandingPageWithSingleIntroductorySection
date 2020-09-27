@@ -139,25 +139,34 @@ table {
 /* End Variables and Mixins */
 .page__full-wrap {
   background: #674baf url("../images/bg-desktop.svg");
-  height: 100%;
+  min-height: 100vh;
   padding: 0 60px;
-  position: absolute;
   width: 100%;
 }
 .page__full-wrap .branding {
   height: 150px;
-  margin-top: 50px;
+  padding-top: 50px;
+  margin-bottom: 40px;
   width: 100%;
+}
+.page__full-wrap .branding img {
+  width: 215px;
 }
 .page__full-wrap .main {
   display: flex;
+  flex-wrap: wrap;
 }
 .page__full-wrap .main--image {
   margin-right: 50px;
+  width: 52%;
+}
+.page__full-wrap .main--image img {
+  width: 100%;
 }
 .page__full-wrap .main--copy {
   display: flex;
   flex-direction: column;
+  width: 43%;
 }
 .page__full-wrap .main--copy__title {
   font-family: "Poppins", sans-serif;
@@ -175,6 +184,7 @@ table {
   font-size: 1.1rem;
   line-height: 1.8rem;
   margin-top: 10px;
+  opacity: 0.8;
   width: 90%;
 }
 .page__full-wrap .main--copy__button {
@@ -192,13 +202,13 @@ table {
   -moz-box-shadow: 0px 10px 6px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 10px 6px 0px rgba(0, 0, 0, 0.15);
 }
-.page__full-wrap .social {
-  bottom: 20px;
+.page__full-wrap .main .social {
   display: flex;
-  position: absolute;
-  right: 100px;
+  justify-content: flex-end;
+  padding: 0 60px 20px 0;
+  width: 100%;
 }
-.page__full-wrap .social--icon {
+.page__full-wrap .main .social--icon {
   align-items: center;
   border-radius: 50%;
   border: 1px solid white;
@@ -209,6 +219,57 @@ table {
   justify-content: center;
   margin-left: 15px;
   width: 40px;
+}
+.page__full-wrap .main .social--icon:first-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .page__full-wrap {
+    background: #674baf url("../images/bg-mobile.svg");
+    padding: 0 30px;
+  }
+  .page__full-wrap .branding {
+    margin-bottom: 0;
+  }
+  .page__full-wrap .branding img {
+    width: 150px;
+  }
+  .page__full-wrap .main {
+    flex-direction: column;
+    width: 100%;
+  }
+  .page__full-wrap .main--image {
+    margin-right: 0;
+    width: 100%;
+  }
+  .page__full-wrap .main--image img {
+    margin: 0 auto;
+  }
+  .page__full-wrap .main--copy {
+    width: 100%;
+  }
+  .page__full-wrap .main--copy__title {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    text-align: center;
+  }
+  .page__full-wrap .main--copy__body {
+    font-size: 0.975rem;
+    line-height: 1.8rem;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 95%;
+  }
+  .page__full-wrap .main--copy__button {
+    font-size: 1.1rem;
+    margin: 30px auto 0;
+  }
+  .page__full-wrap .main .social {
+    margin: 0 auto;
+    justify-content: center;
+    padding: 75px 0 40px 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

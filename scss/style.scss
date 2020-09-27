@@ -15,26 +15,34 @@ $violet: hsl(257, 40%, 49%);
   font-weight: 400;
 }
 /* End Variables and Mixins */
-
 .page__full-wrap {
   background: $violet url("../images/bg-desktop.svg");
-  height: 100%;
+  min-height: 100vh;
   padding: 0 60px;
-  position: absolute;
   width: 100%;
   .branding {
     height: 150px;
-    margin-top: 50px;
+    padding-top: 50px;
+    margin-bottom: 40px;
     width: 100%;
+    img {
+      width: 215px;
+    }
   }
   .main {
     display: flex;
+    flex-wrap: wrap;
     &--image {
       margin-right: 50px;
+      width: 52%;
+      img {
+        width: 100%;
+      }
     }
     &--copy {
       display: flex;
       flex-direction: column;
+      width: 43%;
       &__title {
         @include font__display--bold;
         color: white;
@@ -49,6 +57,7 @@ $violet: hsl(257, 40%, 49%);
         font-size: 1.1rem;
         line-height: 1.8rem;
         margin-top: 10px;
+        opacity: 0.8;
         width: 90%;
       }
       &__button {
@@ -66,23 +75,74 @@ $violet: hsl(257, 40%, 49%);
         box-shadow: 0px 10px 6px 0px rgba(0, 0, 0, 0.15);
       }
     }
-  }
-  .social {
-    bottom: 20px;
-    display: flex;
-    position: absolute;
-    right: 100px;
-    &--icon {
-      align-items: center;
-      border-radius: 50%;
-      border: 1px solid white;
-      color: white;
-      cursor: pointer;
+    .social {
       display: flex;
-      height: 40px;
-      justify-content: center;
-      margin-left: 15px;
-      width: 40px;
+      justify-content: flex-end;
+      padding: 0 60px 20px 0;
+      width: 100%;
+      &--icon {
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        margin-left: 15px;
+        width: 40px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .page__full-wrap {
+    background: $violet url("../images/bg-mobile.svg");
+    padding: 0 30px;
+    .branding {
+      margin-bottom: 0;
+      img {
+        width: 150px;
+      }
+    }
+    .main {
+      flex-direction: column;
+      width: 100%;
+      &--image {
+        margin-right: 0;
+        width: 100%;
+        img {
+          margin: 0 auto;
+        }
+      }
+      &--copy {
+        width: 100%;
+        &__title {
+          font-size: 1.4rem;
+          line-height: 2.6rem;
+          text-align: center;
+        }
+        &__body {
+          font-size: 0.975rem;
+          line-height: 1.8rem;
+          margin: 20px auto 0;
+          text-align: center;
+          width: 95%;
+        }
+        &__button {
+          font-size: 1.1rem;
+          margin: 30px auto 0;
+        }
+      }
+      .social {
+        margin: 0 auto;
+        justify-content: center;
+        padding: 75px 0 40px 0;
+      }
     }
   }
 }
